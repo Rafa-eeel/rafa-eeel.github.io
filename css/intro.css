@@ -1,0 +1,70 @@
+.intro {
+  max-width: 1000px;
+  padding: 2rem 2rem;
+  margin: 0 auto;
+  display: grid;
+  /* o design do site foi feito em 12 colunas. A área em quesão, está diviida assim: 4fr 8f;, o que, nesse caso, seria o equivalente a 1fr 2fr */
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 100px;
+}
+.intro h1 {
+  font-size: 4.5rem;
+  /* cálculo para saber o line-height: 
+  font-size do estilo:4(rem)*font-size do root:16(px)*line-height:1.125=81px*/
+  line-height: 1.125;
+  position: relative;
+}
+.intro h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute;
+  top: -15px;
+  left: -40px;
+  z-index: -1;
+}
+.intro p {
+  font-size: 1.3rem;
+}
+.titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.titulo p::after {
+  content: "🌴";
+  display: inline-block;
+}
+@media (max-width: 1000px) {
+  .intro h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .intro h1 {
+    font-size: 2rem;
+  }
+  .intro h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0;
+  }
+}
+@media (max-width: 600px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+  .perfil {
+    display: none;
+  }
+  .intro p {
+    font-size: 1.3rem;
+  }
+}

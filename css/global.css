@@ -1,0 +1,42 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap"); */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Fira Sans", sans-serif;
+  color: #141414;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.subTitulo {
+  font-size: 8rem;
+  text-transform: uppercase;
+  word-break: break-all;
+  line-height: 1;
+  max-width: 4ch;
+  /* padding: 20px; */
+}
+/* setando globalmente que os subtítulos não quebrem as letras abaixo de 800px */
+@media (max-width: 800px) {
+  .subTitulo {
+    font-size: 3rem;
+    max-width: initial !important;
+  }
+}
